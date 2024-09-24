@@ -30,17 +30,28 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+LOCAL = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
-    'dj_auth_package',
-    'rest_framework'
 ]
+
+THIRD_PARTY = [
+    'dj_auth_package',
+    'rest_framework',
+]
+
+APPS = [
+    'users',
+    'game'
+]
+
+
+
+INSTALLED_APPS = LOCAL + THIRD_PARTY + APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
