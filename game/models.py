@@ -21,4 +21,4 @@ class Question (models.Model) :
     text = models.TextField()
 
     def __str__(self) -> str:
-        return self.room.number + " | " + self.user.full_name
+        return str(self.room.number) + " | " + self.user.full_name
